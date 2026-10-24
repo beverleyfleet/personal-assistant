@@ -1,0 +1,341 @@
+{
+ "data": [
+  {
+   "id": "odometer-traveleddistance",
+   "type": "signal",
+   "attributes": {
+    "code": "odometer-traveleddistance",
+    "name": "traveleddistance",
+    "group": "Odometer",
+    "status": {
+     "value": "SUCCESS"
+    },
+    "body": {
+     "value": 28311.4,
+     "unit": "km"
+    }
+   },
+   "meta": {
+    "retrievedAt": "__HOURS_AGO_0__",
+    "oemUpdatedAt": "__HOURS_AGO_0__",
+    "ingestedAt": "__HOURS_AGO_0__"
+   },
+   "links": {
+    "self": "/vehicles/x/signals/odometer-traveleddistance"
+   }
+  },
+  {
+   "id": "internalcombustionengine-fuellevel",
+   "type": "signal",
+   "attributes": {
+    "code": "internalcombustionengine-fuellevel",
+    "name": "fuellevel",
+    "group": "InternalCombustionEngine",
+    "status": {
+     "value": "SUCCESS"
+    },
+    "body": {
+     "value": 62,
+     "unit": "percent"
+    }
+   },
+   "meta": {
+    "retrievedAt": "__HOURS_AGO_0__",
+    "oemUpdatedAt": "__HOURS_AGO_0__",
+    "ingestedAt": "__HOURS_AGO_0__"
+   },
+   "links": {
+    "self": "/vehicles/x/signals/internalcombustionengine-fuellevel"
+   }
+  },
+  {
+   "id": "internalcombustionengine-range",
+   "type": "signal",
+   "attributes": {
+    "code": "internalcombustionengine-range",
+    "name": "range",
+    "group": "InternalCombustionEngine",
+    "status": {
+     "value": "SUCCESS"
+    },
+    "body": {
+     "value": 402,
+     "unit": "km"
+    }
+   },
+   "meta": {
+    "retrievedAt": "__HOURS_AGO_0__",
+    "oemUpdatedAt": "__HOURS_AGO_0__",
+    "ingestedAt": "__HOURS_AGO_0__"
+   },
+   "links": {
+    "self": "/vehicles/x/signals/internalcombustionengine-range"
+   }
+  },
+  {
+   "id": "internalcombustionengine-amountremaining",
+   "type": "signal",
+   "attributes": {
+    "code": "internalcombustionengine-amountremaining",
+    "name": "amountremaining",
+    "group": "InternalCombustionEngine",
+    "status": {
+     "value": "SUCCESS"
+    },
+    "body": {
+     "value": 62.5,
+     "unit": "liters"
+    }
+   },
+   "meta": {
+    "retrievedAt": "__HOURS_AGO_0__",
+    "oemUpdatedAt": "__HOURS_AGO_0__",
+    "ingestedAt": "__HOURS_AGO_0__"
+   },
+   "links": {
+    "self": "/vehicles/x/signals/internalcombustionengine-amountremaining"
+   }
+  },
+  {
+   "id": "location-preciselocation",
+   "type": "signal",
+   "attributes": {
+    "code": "location-preciselocation",
+    "name": "preciselocation",
+    "group": "Location",
+    "status": {
+     "value": "SUCCESS"
+    },
+    "body": {
+     "latitude": 39.8181,
+     "longitude": -104.6889,
+     "heading": 90.0,
+     "direction": "E",
+     "locationType": "LAST_PARKED"
+    }
+   },
+   "meta": {
+    "retrievedAt": "__HOURS_AGO_0__",
+    "oemUpdatedAt": "__HOURS_AGO_0__",
+    "ingestedAt": "__HOURS_AGO_0__"
+   },
+   "links": {
+    "self": "/vehicles/x/signals/location-preciselocation"
+   }
+  },
+  {
+   "id": "closure-islocked",
+   "type": "signal",
+   "attributes": {
+    "code": "closure-islocked",
+    "name": "islocked",
+    "group": "Closure",
+    "status": {
+     "value": "SUCCESS"
+    },
+    "body": {
+     "value": true
+    }
+   },
+   "meta": {
+    "retrievedAt": "__HOURS_AGO_0__",
+    "oemUpdatedAt": "__HOURS_AGO_0__",
+    "ingestedAt": "__HOURS_AGO_0__"
+   },
+   "links": {
+    "self": "/vehicles/x/signals/closure-islocked"
+   }
+  },
+  {
+   "id": "closure-doors",
+   "type": "signal",
+   "attributes": {
+    "code": "closure-doors",
+    "name": "doors",
+    "group": "Closure",
+    "status": {
+     "value": "SUCCESS"
+    },
+    "body": {
+     "rowCount": 2,
+     "columnCount": 2,
+     "values": [
+      {
+       "row": 0,
+       "column": 0,
+       "isOpen": false,
+       "isLocked": true
+      },
+      {
+       "row": 0,
+       "column": 1,
+       "isOpen": false,
+       "isLocked": true
+      },
+      {
+       "row": 1,
+       "column": 0,
+       "isOpen": false,
+       "isLocked": true
+      },
+      {
+       "row": 1,
+       "column": 1,
+       "isOpen": false,
+       "isLocked": true
+      }
+     ]
+    }
+   },
+   "meta": {
+    "retrievedAt": "__HOURS_AGO_0__",
+    "oemUpdatedAt": "__HOURS_AGO_0__",
+    "ingestedAt": "__HOURS_AGO_0__"
+   },
+   "links": {
+    "self": "/vehicles/x/signals/closure-doors"
+   }
+  },
+  {
+   "id": "wheel-tires",
+   "type": "signal",
+   "attributes": {
+    "code": "wheel-tires",
+    "name": "tires",
+    "group": "Wheel",
+    "status": {
+     "value": "SUCCESS"
+    },
+    "body": {
+     "rowCount": 2,
+     "columnCount": 2,
+     "unit": "kPa",
+     "values": [
+      {
+       "row": 0,
+       "column": 0,
+       "tirePressure": 379
+      },
+      {
+       "row": 0,
+       "column": 1,
+       "tirePressure": 379
+      },
+      {
+       "row": 1,
+       "column": 0,
+       "tirePressure": 393
+      },
+      {
+       "row": 1,
+       "column": 1,
+       "tirePressure": 393
+      }
+     ]
+    }
+   },
+   "meta": {
+    "retrievedAt": "__HOURS_AGO_0__",
+    "oemUpdatedAt": "__HOURS_AGO_0__",
+    "ingestedAt": "__HOURS_AGO_0__"
+   },
+   "links": {
+    "self": "/vehicles/x/signals/wheel-tires"
+   }
+  },
+  {
+   "id": "internalcombustionengine-oillife",
+   "type": "signal",
+   "attributes": {
+    "code": "internalcombustionengine-oillife",
+    "name": "oillife",
+    "group": "InternalCombustionEngine",
+    "status": {
+     "value": "SUCCESS"
+    },
+    "body": {
+     "value": 48,
+     "unit": "percent"
+    }
+   },
+   "meta": {
+    "retrievedAt": "__HOURS_AGO_0__",
+    "oemUpdatedAt": "__HOURS_AGO_0__",
+    "ingestedAt": "__HOURS_AGO_0__"
+   },
+   "links": {
+    "self": "/vehicles/x/signals/internalcombustionengine-oillife"
+   }
+  },
+  {
+   "id": "transmission-gearstate",
+   "type": "signal",
+   "attributes": {
+    "code": "transmission-gearstate",
+    "name": "gearstate",
+    "group": "Transmission",
+    "status": {
+     "value": "SUCCESS"
+    },
+    "body": {
+     "value": "PARK"
+    }
+   },
+   "meta": {
+    "retrievedAt": "__HOURS_AGO_0__",
+    "oemUpdatedAt": "__HOURS_AGO_0__",
+    "ingestedAt": "__HOURS_AGO_0__"
+   },
+   "links": {
+    "self": "/vehicles/x/signals/transmission-gearstate"
+   }
+  },
+  {
+   "id": "vehicleidentification-vin",
+   "type": "signal",
+   "attributes": {
+    "code": "vehicleidentification-vin",
+    "name": "vin",
+    "group": "VehicleIdentification",
+    "status": {
+     "value": "SUCCESS"
+    },
+    "body": {
+     "value": "1FBAX9Y87RKA27765"
+    }
+   },
+   "meta": {
+    "retrievedAt": "__HOURS_AGO_0__",
+    "oemUpdatedAt": "__HOURS_AGO_0__",
+    "ingestedAt": "__HOURS_AGO_0__"
+   },
+   "links": {
+    "self": "/vehicles/x/signals/vehicleidentification-vin"
+   }
+  }
+ ],
+ "meta": {
+  "pageNumber": 1,
+  "pageSize": 11,
+  "totalCount": 11
+ },
+ "links": {
+  "self": "https://vehicle.api.smartcar.com/v3/vehicles/3f1c2b7e-24aa-4c1e-9a10-000000000024/signals"
+ },
+ "included": {
+  "vehicle": {
+   "id": "3f1c2b7e-24aa-4c1e-9a10-000000000024",
+   "type": "vehicle",
+   "attributes": {
+    "make": "Ford",
+    "model": "Transit",
+    "year": 2024,
+    "powertrainType": "ICE",
+    "mode": "live"
+   },
+   "links": {
+    "self": "/vehicles/3f1c2b7e-24aa-4c1e-9a10-000000000024"
+   }
+  }
+ }
+}

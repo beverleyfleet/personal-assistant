@@ -1,0 +1,294 @@
+{
+ "data": [
+  {
+   "id": "odometer-traveleddistance",
+   "type": "signal",
+   "attributes": {
+    "code": "odometer-traveleddistance",
+    "name": "traveleddistance",
+    "group": "Odometer",
+    "status": {
+     "value": "SUCCESS"
+    },
+    "body": {
+     "value": 9120,
+     "unit": "miles"
+    }
+   },
+   "meta": {
+    "retrievedAt": "__HOURS_AGO_0__",
+    "oemUpdatedAt": "__HOURS_AGO_0__",
+    "ingestedAt": "__HOURS_AGO_0__"
+   },
+   "links": {
+    "self": "/vehicles/x/signals/odometer-traveleddistance"
+   }
+  },
+  {
+   "id": "internalcombustionengine-fuellevel",
+   "type": "signal",
+   "attributes": {
+    "code": "internalcombustionengine-fuellevel",
+    "name": "fuellevel",
+    "group": "InternalCombustionEngine",
+    "status": {
+     "value": "SUCCESS"
+    },
+    "body": {
+     "value": 18,
+     "unit": "percent"
+    }
+   },
+   "meta": {
+    "retrievedAt": "__HOURS_AGO_0__",
+    "oemUpdatedAt": "__HOURS_AGO_0__",
+    "ingestedAt": "__HOURS_AGO_0__"
+   },
+   "links": {
+    "self": "/vehicles/x/signals/internalcombustionengine-fuellevel"
+   }
+  },
+  {
+   "id": "internalcombustionengine-range",
+   "type": "signal",
+   "attributes": {
+    "code": "internalcombustionengine-range",
+    "name": "range",
+    "group": "InternalCombustionEngine",
+    "status": {
+     "value": "SUCCESS"
+    },
+    "body": {
+     "value": 96,
+     "unit": "km"
+    }
+   },
+   "meta": {
+    "retrievedAt": "__HOURS_AGO_0__",
+    "oemUpdatedAt": "__HOURS_AGO_0__",
+    "ingestedAt": "__HOURS_AGO_0__"
+   },
+   "links": {
+    "self": "/vehicles/x/signals/internalcombustionengine-range"
+   }
+  },
+  {
+   "id": "location-preciselocation",
+   "type": "signal",
+   "attributes": {
+    "code": "location-preciselocation",
+    "name": "preciselocation",
+    "group": "Location",
+    "status": {
+     "value": "SUCCESS"
+    },
+    "body": {
+     "latitude": 39.8175,
+     "longitude": -104.6902,
+     "heading": 0,
+     "direction": "N",
+     "locationType": "LAST_PARKED"
+    }
+   },
+   "meta": {
+    "retrievedAt": "__HOURS_AGO_0__",
+    "oemUpdatedAt": "__HOURS_AGO_0__",
+    "ingestedAt": "__HOURS_AGO_0__"
+   },
+   "links": {
+    "self": "/vehicles/x/signals/location-preciselocation"
+   }
+  },
+  {
+   "id": "closure-islocked",
+   "type": "signal",
+   "attributes": {
+    "code": "closure-islocked",
+    "name": "islocked",
+    "group": "Closure",
+    "status": {
+     "value": "SUCCESS"
+    },
+    "body": {
+     "value": false
+    }
+   },
+   "meta": {
+    "retrievedAt": "__HOURS_AGO_0__",
+    "oemUpdatedAt": "__HOURS_AGO_0__",
+    "ingestedAt": "__HOURS_AGO_0__"
+   },
+   "links": {
+    "self": "/vehicles/x/signals/closure-islocked"
+   }
+  },
+  {
+   "id": "closure-doors",
+   "type": "signal",
+   "attributes": {
+    "code": "closure-doors",
+    "name": "doors",
+    "group": "Closure",
+    "status": {
+     "value": "SUCCESS"
+    },
+    "body": {
+     "rowCount": 2,
+     "columnCount": 2,
+     "values": [
+      {
+       "row": 0,
+       "column": 0,
+       "isOpen": false,
+       "isLocked": false
+      },
+      {
+       "row": 0,
+       "column": 1,
+       "isOpen": false,
+       "isLocked": false
+      },
+      {
+       "row": 1,
+       "column": 0,
+       "isOpen": false,
+       "isLocked": false
+      },
+      {
+       "row": 1,
+       "column": 1,
+       "isOpen": true,
+       "isLocked": false
+      }
+     ]
+    }
+   },
+   "meta": {
+    "retrievedAt": "__HOURS_AGO_0__",
+    "oemUpdatedAt": "__HOURS_AGO_0__",
+    "ingestedAt": "__HOURS_AGO_0__"
+   },
+   "links": {
+    "self": "/vehicles/x/signals/closure-doors"
+   }
+  },
+  {
+   "id": "wheel-tires",
+   "type": "signal",
+   "attributes": {
+    "code": "wheel-tires",
+    "name": "tires",
+    "group": "Wheel",
+    "status": {
+     "value": "SUCCESS"
+    },
+    "body": {
+     "rowCount": 2,
+     "columnCount": 2,
+     "unit": "kPa",
+     "values": [
+      {
+       "row": 0,
+       "column": 0,
+       "tirePressure": 380
+      },
+      {
+       "row": 0,
+       "column": 1,
+       "tirePressure": 381
+      },
+      {
+       "row": 1,
+       "column": 0,
+       "tirePressure": 395
+      },
+      {
+       "row": 1,
+       "column": 1,
+       "tirePressure": 394
+      }
+     ]
+    }
+   },
+   "meta": {
+    "retrievedAt": "__HOURS_AGO_0__",
+    "oemUpdatedAt": "__HOURS_AGO_0__",
+    "ingestedAt": "__HOURS_AGO_0__"
+   },
+   "links": {
+    "self": "/vehicles/x/signals/wheel-tires"
+   }
+  },
+  {
+   "id": "internalcombustionengine-oillife",
+   "type": "signal",
+   "attributes": {
+    "code": "internalcombustionengine-oillife",
+    "name": "oillife",
+    "group": "InternalCombustionEngine",
+    "status": {
+     "value": "SUCCESS"
+    },
+    "body": {
+     "value": 81,
+     "unit": "percent"
+    }
+   },
+   "meta": {
+    "retrievedAt": "__HOURS_AGO_0__",
+    "oemUpdatedAt": "__HOURS_AGO_0__",
+    "ingestedAt": "__HOURS_AGO_0__"
+   },
+   "links": {
+    "self": "/vehicles/x/signals/internalcombustionengine-oillife"
+   }
+  },
+  {
+   "id": "vehicleidentification-vin",
+   "type": "signal",
+   "attributes": {
+    "code": "vehicleidentification-vin",
+    "name": "vin",
+    "group": "VehicleIdentification",
+    "status": {
+     "value": "SUCCESS"
+    },
+    "body": {
+     "value": "1FBAX9CGXSKA05649"
+    }
+   },
+   "meta": {
+    "retrievedAt": "__HOURS_AGO_0__",
+    "oemUpdatedAt": "__HOURS_AGO_0__",
+    "ingestedAt": "__HOURS_AGO_0__"
+   },
+   "links": {
+    "self": "/vehicles/x/signals/vehicleidentification-vin"
+   }
+  }
+ ],
+ "meta": {
+  "pageNumber": 1,
+  "pageSize": 9,
+  "totalCount": 9
+ },
+ "links": {
+  "self": "https://vehicle.api.smartcar.com/v3/vehicles/3f1c2b7e-25aa-4c1e-9a10-000000000025/signals"
+ },
+ "included": {
+  "vehicle": {
+   "id": "3f1c2b7e-25aa-4c1e-9a10-000000000025",
+   "type": "vehicle",
+   "attributes": {
+    "make": "Ford",
+    "model": "Transit",
+    "year": 2025,
+    "powertrainType": "ICE",
+    "mode": "live"
+   },
+   "links": {
+    "self": "/vehicles/3f1c2b7e-25aa-4c1e-9a10-000000000025"
+   }
+  }
+ }
+}

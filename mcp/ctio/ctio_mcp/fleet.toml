@@ -1,0 +1,42 @@
+# Beverley Fleet plate -> vehicle map. Plates are matched case-insensitively,
+# ignoring spaces/hyphens and an optional leading "TEMP".
+# Override the location of this file with env CTIO_FLEET_FILE.
+
+[[vehicle]]
+plate = "EIUY09"
+state = "CO"
+year = 2022
+make = "Audi"
+model = "Q5"
+
+[[vehicle]]
+plate = "FNYI83"
+state = "CO"
+year = 2021
+make = "Chevrolet"
+model = "Suburban"
+
+[[vehicle]]
+plate = "FNYG83"
+state = "CO"
+year = 2023
+make = "Ford"
+model = "Transit"
+
+[[vehicle]]
+plate = "Temp 8620436"
+state = "CO"
+temporary = true
+year = 2024
+make = "Ford"
+model = "Transit"
+nickname = "Joker"
+
+[[vehicle]]
+plate = "Temp 8632431"
+state = "CO"
+temporary = true
+year = 2025
+make = "Ford"
+model = "Transit"
+nickname = "Heaps"

@@ -1,0 +1,38 @@
+[
+ {
+  "m": "GET",
+  "url": "https://api.expresslanesafety.com/login/construct",
+  "status": 200,
+  "req": "",
+  "reqh": {},
+  "body": "[{\"Id\":1,\"name\":\"maintenance\",\"value\":\"Our website is currently undergoing scheduled maintenance until 6:05 AM MT for system upgrades and improvements.\",\"IsActive\":false},{\"Id\":2,\"name\":\"banner\",\"value\":\"American Express payments are temporarily unavailable. Please use an alternate card at this time.\",\"IsActive\":false},{\"Id\":3,\"name\":\"banner\",\"value\":\"Nationally there have been an increased number of scams requesting payments to settle outstanding toll amounts by text. The Safety & Toll Enforcement program does not collect fines by text, please do not click on any links. Never provide your credit card information to an unverified source. \",\"IsActive\":true},{\"Id\":4,\"name\":\"maintenance\",\"value\":\"American Express payments are temporarily unavailable. Please use an alternate card at this time."
+ },
+ {
+  "m": "POST",
+  "url": "https://api.expresslanesafety.com/login/notification",
+  "status": 401,
+  "req": "{\"NoticeNumber\":\"123-456-789-012\",\"LicensePlate\":\"ZZZ000\",\"LP_State\":\"CO\"}",
+  "reqh": {
+   "content-type": "application/json"
+  },
+  "body": "{\"Message\":\"Invalid data\"}"
+ },
+ {
+  "m": "GET",
+  "url": "https://api.expresslanesafety.com/login/construct",
+  "status": 200,
+  "req": "",
+  "reqh": {},
+  "body": "[{\"Id\":1,\"name\":\"maintenance\",\"value\":\"Our website is currently undergoing scheduled maintenance until 6:05 AM MT for system upgrades and improvements.\",\"IsActive\":false},{\"Id\":2,\"name\":\"banner\",\"value\":\"American Express payments are temporarily unavailable. Please use an alternate card at this time.\",\"IsActive\":false},{\"Id\":3,\"name\":\"banner\",\"value\":\"Nationally there have been an increased number of scams requesting payments to settle outstanding toll amounts by text. The Safety & Toll Enforcement program does not collect fines by text, please do not click on any links. Never provide your credit card information to an unverified source. \",\"IsActive\":true},{\"Id\":4,\"name\":\"maintenance\",\"value\":\"American Express payments are temporarily unavailable. Please use an alternate card at this time."
+ },
+ {
+  "m": "POST",
+  "url": "https://api.expresslanesafety.com/login/QuickPay",
+  "status": 401,
+  "req": "{\"LicensePlate\":\"ZZZ000\",\"LP_State\":\"CO\"}",
+  "reqh": {
+   "content-type": "application/json"
+  },
+  "body": "{\"Message\":\"Unauthorized\"}"
+ }
+]

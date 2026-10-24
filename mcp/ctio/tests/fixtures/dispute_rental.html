@@ -1,0 +1,87 @@
+<!doctype html>
+<!-- Local fixture reproducing the CTIO Answer page + app-rental form markup
+     (attributes copied from bundle 216.e009d76d86d338e6.js, 2026-10-24). Not the real site. -->
+<html><head><meta charset="utf-8"><title>CTIO fixture</title>
+<style>.modal{display:none;position:fixed;top:20%;left:20%;background:#eee;padding:20px;border:1px solid}#disputes{display:none}</style>
+</head><body>
+<div id="violations">
+  <a id="disputeLinkId" href="#" onclick="showDisputes();return false;">Or Answer Civil Penalty</a>
+</div>
+<div id="disputes">
+  <table role="table" class="violations-table table">
+    <tbody>
+      <tr><td></td><td><button style="background:transparent" onclick="expand()"><img class="toggle-img-show" src="x.svg" title="Click here to Show Civil Penalties"></button></td>
+          <td><span>90X-XXX-XXX-X79</span></td><td>10/13/2026</td></tr>
+      <tr id="detailRow" style="display:none"><td colspan="4">
+        <table role="table" class="table expanded-table mb-4">
+          <thead><tr><th></th><th>Civil Penality Number</th><th>Date Time</th><th>Location</th><th>Description</th><th>Status</th><th>Amount Due</th><th></th></tr></thead>
+          <tbody>
+            <tr><td><input aria-label="Please Check" type="checkbox" class="cb" data-trx="123456789"><input aria-label="Please Check" type="checkbox" hidden></td>
+                <td><span> 123 456 789 </span></td><td>10/12/2026 3:45:12 PM</td><td>I-25 Express NB MP 210</td><td>Double white line crossing</td><td><span>UNPAID</span></td><td>$300.00</td><td></td></tr>
+            <tr><td><input aria-label="Please Check" type="checkbox" class="cb" data-trx="987654321"><input aria-label="Please Check" type="checkbox" hidden></td>
+                <td><span> 987 654 321 </span></td><td>10/20/2026 8:01:00 AM</td><td>US-36 Express EB</td><td>Double white line crossing</td><td><span>UNPAID</span></td><td>$300.00</td><td></td></tr>
+            <tr><td><input aria-label="Please Check" type="checkbox" class="cb" data-trx="555000111" disabled><input aria-label="Please Check" type="checkbox" hidden></td>
+                <td><span> 555 000 111 </span></td><td>09/01/2026 1:00:00 PM</td><td>I-70 Mountain Express</td><td>Toll evasion</td><td><span>DISMISSED</span></td><td>$0.00</td><td></td></tr>
+          </tbody>
+        </table></td></tr>
+    </tbody>
+  </table>
+  <div id="myModal" class="modal"><div>Details</div><button onclick="this.parentNode.style.display='none'">Close</button></div>
+
+  <select id="DisCivPenReasonSelect" name="people" aria-label="Select a reason for the dispute" onchange="reason(this.value)">
+    <option value=""></option><option value="Vehicle was stolen">Vehicle was stolen</option><option value="Rental">Rental</option><option value="Other">Other</option>
+  </select>
+  <div id="rentalForm" style="display:none">
+    <div class="contact-info pb-5">
+      <input type="text" aria-label="Please Enter Email" title="Please Enter Email" maxlength="40" autocomplete="off">
+      <input type="text" aria-label="Please Enter Phone" title="Please Enter" maxlength="14" autocomplete="off" onkeyup="fmtPhone(this)">
+    </div>
+    <div class="main-container">
+      <h5>Affidavit of Non-Liability</h5>
+      <h5>I declare that on the date of the violation, the vehicle with the license plate number above was rented.</h5>
+      <input type="date" placeholder="SELECT DATE" aria-label="Please Enter Rental Agreement Start Date" title="Please Enter Rental Agreement Start Date">
+      <input type="date" placeholder="SELECT DATE" aria-label="Please Enter Rental Agreement End Date" title="Please Enter Rental Agreement End Date">
+      <input maxlength="30" type="text" placeholder="FIRST NAME" aria-label="Please Enter First Name" title="Please Enter First Name">
+      <input maxlength="30" type="text" placeholder="LAST NAME" aria-label="Please Enter Last Name" title="Please Enter Last Name">
+      <input maxlength="60" type="text" placeholder="MAILING ADDRESS" aria-label="Please Enter Mailing Address" title="Please Enter Mailing Address">
+      <input type="text" maxlength="30" placeholder="APT / SUITE" aria-label="Please Enter Apt / Suite" title="Please Enter Apt / Suite">
+      <input type="text" maxlength="30" placeholder="ENTER CITY" aria-label="Please Enter City" title="Please Enter City">
+      <select aria-label="Please select State" title="Please select State" required>
+        <option disabled selected value=""></option><option value="Colorado">Colorado</option><option value="Texas">Texas</option><option value="Wyoming">Wyoming</option>
+      </select>
+      <input maxlength="10" type="text" placeholder="ZIPCODE" aria-label="Please Enter ZipCode" title="Please Enter ZipCode">
+      <input accept=".pdf,.jpg,.jpeg,.png" type="file" id="file" class="box__file" onchange="upload(this)">
+      <label for="file"><span class="box__browse" role="button" aria-label="Browse Files">Browse Files</span></label>
+      <div class="helper-text mt-1"> Maximum file size is 5mb and supporting formats are pdf, jpg, jpeg, png</div>
+      <div id="files"></div>
+      <textarea aria-label="Please Enter " title="Description" aria-describedby="Please enter Description" rows="4" cols="100"></textarea>
+      <input type="checkbox" id="declaration-agree" aria-label="Please check I agree to acccept electronic communication of any response or determination in lieu of printed copy.">
+      <input type="checkbox" id="declaration-submit" aria-label="Please check By clicking submit, I declare under penalty and perjury that the above information is true and correct.">
+      <button aria-label="Cancel" title="Cancel" class="cancel me-3">CANCEL</button>
+      <button aria-label="Submit" title="Submit" aria-pressed="false" id="RentalSubmitId" class="submit" onclick="submitRental()">Submit</button>
+    </div>
+  </div>
+  <div id="ack" style="display:none"><div>Dispute Acknowledged</div><span>You will receive an email confirmation shortly.</span></div>
+</div>
+<script>
+window.__uploads = []; window.__ticket = null;
+function showDisputes(){ document.getElementById('violations').style.display='none'; document.getElementById('disputes').style.display='block'; }
+function expand(){ document.getElementById('detailRow').style.display=''; }
+document.addEventListener('change', e => { if (e.target.classList.contains('cb') && e.target.checked) document.getElementById('myModal').style.display='block'; });
+function reason(v){ document.getElementById('rentalForm').style.display = v === 'Rental' ? 'block' : 'none'; }
+function fmtPhone(el){ const d = el.value.replace(/\D/g,'').slice(0,10); el.value = d.length>6 ? `(${d.slice(0,3)}) ${d.slice(3,6)}-${d.slice(6)}` : d.length>3 ? `(${d.slice(0,3)}) ${d.slice(3)}` : d; }
+function upload(inp){ const f = inp.files.item(0); if (!/\.(pdf|png|jpeg|jpg)$/.test(f.name)) { alert('Not a valid file type'); return; }
+  window.__uploads.push(f.name);
+  const box = document.getElementById('files'); box.className = 'mt-1 alert alert-secondary';
+  box.innerHTML += `<div class="text-info mb-1">${f.name}</div>`; }
+function q(l){ return document.querySelector(`[aria-label="${l}"]`).value; }
+function submitRental(){
+  const sel = [...document.querySelectorAll('.cb')].filter(c=>c.checked).map(c=>c.dataset.trx);
+  if (!document.getElementById('declaration-submit').checked || !document.getElementById('declaration-agree').checked || !window.__uploads.length || !sel.length) return;
+  window.__ticket = { ticket: 'ZD-424242', Subject: 'Rental', ViolationNumbers: sel.join(','), Email: q('Please Enter Email'), Phone: q('Please Enter Phone'),
+    Fields: { Rental_Agrement_Start_Date: q('Please Enter Rental Agreement Start Date'), Rental_Agrement_End_Date: q('Please Enter Rental Agreement End Date'),
+      FirstName: q('Please Enter First Name'), LastName: q('Please Enter Last Name'), MailingAddress: q('Please Enter Mailing Address'),
+      City: q('Please Enter City'), State: q('Please select State'), ZipCode: q('Please Enter ZipCode') }, Attachments: window.__uploads };
+  document.getElementById('ack').style.display = 'block';
+}
+</script></body></html>

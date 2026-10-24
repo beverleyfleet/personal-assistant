@@ -1,0 +1,171 @@
+{
+ "data": [
+  {
+   "id": "c0nn-t24",
+   "type": "connection",
+   "attributes": {
+    "permissions": [
+     "read_vehicle_info",
+     "read_vin",
+     "read_odometer",
+     "read_fuel",
+     "read_location",
+     "read_security"
+    ],
+    "vehicle": {
+     "make": "Ford",
+     "model": "Transit",
+     "year": 2024,
+     "mode": "live",
+     "powertrainType": "ICE"
+    },
+    "user": {
+     "id": "11111111-f0f0-4d00-a000-00000000f04d",
+     "externalId": "beverley-fleet-ford"
+    },
+    "status": {
+     "name": "ACTIVE"
+    }
+   },
+   "relationships": {
+    "vehicle": {
+     "data": {
+      "id": "3f1c2b7e-24aa-4c1e-9a10-000000000024",
+      "type": "vehicle"
+     },
+     "links": {
+      "self": "/vehicles/3f1c2b7e-24aa-4c1e-9a10-000000000024"
+     }
+    }
+   }
+  },
+  {
+   "id": "c0nn-t25",
+   "type": "connection",
+   "attributes": {
+    "permissions": [
+     "read_vehicle_info",
+     "read_vin",
+     "read_odometer",
+     "read_fuel",
+     "read_location",
+     "read_security"
+    ],
+    "vehicle": {
+     "make": "Ford",
+     "model": "Transit",
+     "year": 2025,
+     "mode": "live",
+     "powertrainType": "ICE"
+    },
+    "user": {
+     "id": "11111111-f0f0-4d00-a000-00000000f04d",
+     "externalId": "beverley-fleet-ford"
+    },
+    "status": {
+     "name": "ACTIVE"
+    }
+   },
+   "relationships": {
+    "vehicle": {
+     "data": {
+      "id": "3f1c2b7e-25aa-4c1e-9a10-000000000025",
+      "type": "vehicle"
+     },
+     "links": {
+      "self": "/vehicles/3f1c2b7e-25aa-4c1e-9a10-000000000025"
+     }
+    }
+   }
+  },
+  {
+   "id": "c0nn-audi",
+   "type": "connection",
+   "attributes": {
+    "permissions": [
+     "read_vehicle_info",
+     "read_vin",
+     "read_odometer",
+     "read_fuel",
+     "read_location",
+     "read_security"
+    ],
+    "vehicle": {
+     "make": "Audi",
+     "model": "Q5",
+     "year": 2022,
+     "mode": "live",
+     "powertrainType": "ICE"
+    },
+    "user": {
+     "id": "22222222-a0a0-4d00-a000-00000000a0d1",
+     "externalId": "beverley-fleet-audi"
+    },
+    "status": {
+     "name": "ACTIVE"
+    }
+   },
+   "relationships": {
+    "vehicle": {
+     "data": {
+      "id": "a0d1a0d1-0000-4a11-8e22-0000000a0d10",
+      "type": "vehicle"
+     },
+     "links": {
+      "self": "/vehicles/a0d1a0d1-0000-4a11-8e22-0000000a0d10"
+     }
+    }
+   }
+  },
+  {
+   "id": "c0nn-sub",
+   "type": "connection",
+   "attributes": {
+    "permissions": [
+     "read_vehicle_info",
+     "read_vin",
+     "read_odometer",
+     "read_fuel",
+     "read_location",
+     "read_security"
+    ],
+    "vehicle": {
+     "make": "Chevrolet",
+     "model": "Suburban",
+     "year": 2021,
+     "mode": "live",
+     "powertrainType": "ICE"
+    },
+    "user": {
+     "id": "33333333-c0c0-4d00-a000-00000000c4e7",
+     "externalId": "beverley-fleet-chevrolet"
+    },
+    "status": {
+     "name": "ACTIVE"
+    }
+   },
+   "relationships": {
+    "vehicle": {
+     "data": {
+      "id": "5b5b5b5b-0000-4c0e-8a33-000000005b00",
+      "type": "vehicle"
+     },
+     "links": {
+      "self": "/vehicles/5b5b5b5b-0000-4c0e-8a33-000000005b00"
+     }
+    }
+   }
+  }
+ ],
+ "meta": {
+  "pageNumber": 1,
+  "pageSize": 50,
+  "totalCount": 4,
+  "orderBy": "createdAt",
+  "orderDirection": "DESC"
+ },
+ "links": {
+  "self": "https://vehicle.api.smartcar.com/v3/connections?page[number]=1&page[size]=50",
+  "next": null
+ }
+}

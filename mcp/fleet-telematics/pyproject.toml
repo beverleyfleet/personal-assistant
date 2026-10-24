@@ -1,0 +1,31 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "fleet-telematics"
+version = "0.1.0"
+description = "Local MCP server for Beverley Fleet: real-time vehicle data via Smartcar (API v3), with provider stubs for Ford Pro and Mercedes PRO"
+requires-python = ">=3.11"
+dependencies = [
+  "mcp>=2.3,<3",
+  # mcp 2.3 already depends on httpx2 (the httpx successor); we reuse it instead of adding a client.
+  "httpx2>=2.13",
+]
+
+[project.optional-dependencies]
+test = ["pytest>=8"]
+
+[project.scripts]
+fleet-telematics = "fleet_telematics.server:main"
+fleet-auth = "fleet_telematics.auth_cli:main"
+
+[tool.setuptools]
+packages = ["fleet_telematics", "fleet_telematics.providers"]
+
+[tool.setuptools.package-data]
+fleet_telematics = ["data/*.json"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+markers = ["live: hits the real Smartcar API (set FLEET_LIVE=1 and have op signed in)"]

@@ -1,0 +1,199 @@
+{
+ "data": [
+  {
+   "id": "odometer-traveleddistance",
+   "type": "signal",
+   "attributes": {
+    "code": "odometer-traveleddistance",
+    "name": "traveleddistance",
+    "group": "Odometer",
+    "status": {
+     "value": "SUCCESS"
+    },
+    "body": {
+     "value": 41000,
+     "unit": "km"
+    }
+   },
+   "meta": {
+    "retrievedAt": "__HOURS_AGO_0__",
+    "oemUpdatedAt": "__HOURS_AGO_0__",
+    "ingestedAt": "__HOURS_AGO_0__"
+   },
+   "links": {
+    "self": "/vehicles/x/signals/odometer-traveleddistance"
+   }
+  },
+  {
+   "id": "internalcombustionengine-fuellevel",
+   "type": "signal",
+   "attributes": {
+    "code": "internalcombustionengine-fuellevel",
+    "name": "fuellevel",
+    "group": "InternalCombustionEngine",
+    "status": {
+     "value": "SUCCESS"
+    },
+    "body": {
+     "value": 40,
+     "unit": "percent"
+    }
+   },
+   "meta": {
+    "retrievedAt": "__HOURS_AGO_0__",
+    "oemUpdatedAt": "__HOURS_AGO_0__",
+    "ingestedAt": "__HOURS_AGO_0__"
+   },
+   "links": {
+    "self": "/vehicles/x/signals/internalcombustionengine-fuellevel"
+   }
+  },
+  {
+   "id": "internalcombustionengine-range",
+   "type": "signal",
+   "attributes": {
+    "code": "internalcombustionengine-range",
+    "name": "range",
+    "group": "InternalCombustionEngine",
+    "status": {
+     "value": "SUCCESS"
+    },
+    "body": {
+     "value": 250,
+     "unit": "km"
+    }
+   },
+   "meta": {
+    "retrievedAt": "__HOURS_AGO_0__",
+    "oemUpdatedAt": "__HOURS_AGO_0__",
+    "ingestedAt": "__HOURS_AGO_0__"
+   },
+   "links": {
+    "self": "/vehicles/x/signals/internalcombustionengine-range"
+   }
+  },
+  {
+   "id": "location-preciselocation",
+   "type": "signal",
+   "attributes": {
+    "code": "location-preciselocation",
+    "name": "preciselocation",
+    "group": "Location",
+    "status": {
+     "value": "SUCCESS"
+    },
+    "body": {
+     "latitude": 39.7392,
+     "longitude": -104.9903,
+     "heading": 180,
+     "direction": "S",
+     "locationType": "CURRENT"
+    }
+   },
+   "meta": {
+    "retrievedAt": "__HOURS_AGO_0__",
+    "oemUpdatedAt": "__HOURS_AGO_0__",
+    "ingestedAt": "__HOURS_AGO_0__"
+   },
+   "links": {
+    "self": "/vehicles/x/signals/location-preciselocation"
+   }
+  },
+  {
+   "id": "closure-islocked",
+   "type": "signal",
+   "attributes": {
+    "code": "closure-islocked",
+    "name": "islocked",
+    "group": "Closure",
+    "status": {
+     "value": "SUCCESS"
+    },
+    "body": {
+     "value": true
+    }
+   },
+   "meta": {
+    "retrievedAt": "__HOURS_AGO_0__",
+    "oemUpdatedAt": "__HOURS_AGO_0__",
+    "ingestedAt": "__HOURS_AGO_0__"
+   },
+   "links": {
+    "self": "/vehicles/x/signals/closure-islocked"
+   }
+  },
+  {
+   "id": "wheel-tires",
+   "type": "signal",
+   "attributes": {
+    "code": "wheel-tires",
+    "name": "tires",
+    "group": "Wheel",
+    "status": {
+     "value": "ERROR",
+     "error": {
+      "type": "COMPATIBILITY",
+      "code": "VEHICLE_NOT_CAPABLE",
+      "title": "Vehicle Not Capable",
+      "detail": "The vehicle is not capable of performing the request."
+     }
+    }
+   },
+   "meta": {
+    "retrievedAt": "__HOURS_AGO_0__",
+    "oemUpdatedAt": "__HOURS_AGO_0__",
+    "ingestedAt": "__HOURS_AGO_0__"
+   },
+   "links": {
+    "self": "/vehicles/x/signals/wheel-tires"
+   }
+  },
+  {
+   "id": "vehicleidentification-vin",
+   "type": "signal",
+   "attributes": {
+    "code": "vehicleidentification-vin",
+    "name": "vin",
+    "group": "VehicleIdentification",
+    "status": {
+     "value": "SUCCESS"
+    },
+    "body": {
+     "value": "WA1GAAFY6N2085527"
+    }
+   },
+   "meta": {
+    "retrievedAt": "__HOURS_AGO_0__",
+    "oemUpdatedAt": "__HOURS_AGO_0__",
+    "ingestedAt": "__HOURS_AGO_0__"
+   },
+   "links": {
+    "self": "/vehicles/x/signals/vehicleidentification-vin"
+   }
+  }
+ ],
+ "meta": {
+  "pageNumber": 1,
+  "pageSize": 7,
+  "totalCount": 7
+ },
+ "links": {
+  "self": "https://vehicle.api.smartcar.com/v3/vehicles/a0d1a0d1-0000-4a11-8e22-0000000a0d10/signals"
+ },
+ "included": {
+  "vehicle": {
+   "id": "a0d1a0d1-0000-4a11-8e22-0000000a0d10",
+   "type": "vehicle",
+   "attributes": {
+    "make": "Audi",
+    "model": "Q5",
+    "year": 2022,
+    "powertrainType": "ICE",
+    "mode": "live"
+   },
+   "links": {
+    "self": "/vehicles/a0d1a0d1-0000-4a11-8e22-0000000a0d10"
+   }
+  }
+ }
+}

@@ -1,0 +1,186 @@
+<title>Turo Message Templates</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&family=Raleway:wght@400;500;600&display=swap">
+<style>
+/* Layout: fleet tabs across the top; per vehicle, three message cards in trip order with a copy button each. Beverley Fleet B&W system. */
+:root{
+  --bg:#ffffff; --ink:#020e01; --panel:#fafbf3; --line:#dcdcd6; --muted:#6f6f6c; --token-bg:#ececE4;
+  --display:"Cormorant Garamond", Georgia, "Times New Roman", serif;
+  --body:"Raleway", "Helvetica Neue", Arial, sans-serif;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){--bg:#0d0f0c;--ink:#f3f4ee;--panel:#161914;--line:#2f332c;--muted:#a3a59d;--token-bg:#262a23;color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#0d0f0c;--ink:#f3f4ee;--panel:#161914;--line:#2f332c;--muted:#a3a59d;--token-bg:#262a23;color-scheme:dark}
+body{background:var(--bg);color:var(--ink);font-family:var(--body);font-size:15px;line-height:1.55}
+.wrap{max-width:980px;margin:0 auto;padding-block:32px 64px;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));display:grid;gap:28px}
+h1{font-family:var(--display);font-weight:600;font-size:clamp(2rem,5vw,2.8rem);line-height:1.05;margin:0;text-wrap:balance}
+.lede{color:var(--muted);max-width:62ch;margin:6px 0 0}
+.notes{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:12px}
+.note{border:1px solid var(--line);border-radius:14px;padding:14px 16px;background:var(--panel);min-width:0}
+.note b{display:block;font-size:11px;letter-spacing:.12em;text-transform:uppercase;margin-bottom:4px}
+.note p{margin:0;color:var(--muted);font-size:14px}
+.tabs{display:flex;flex-wrap:wrap;gap:8px}
+.tab{font:inherit;font-weight:500;border:1px solid var(--ink);background:transparent;color:var(--ink);border-radius:999px;padding:8px 16px;cursor:pointer}
+.tab[aria-selected="true"]{background:var(--ink);color:var(--bg)}
+.tab:focus-visible,.copy:focus-visible{outline:2px solid var(--ink);outline-offset:3px}
+.vhead{display:flex;flex-wrap:wrap;align-items:baseline;justify-content:space-between;gap:8px 20px;border-bottom:1px solid var(--line);padding-bottom:12px}
+.vhead h2{font-family:var(--display);font-weight:600;font-size:1.9rem;margin:0}
+.specs{display:flex;flex-wrap:wrap;gap:6px}
+.spec{font-size:12px;border:1px solid var(--line);border-radius:999px;padding:3px 10px;color:var(--muted)}
+.cards{display:grid;gap:18px}
+.card{display:grid;grid-template-columns:44px 1fr;gap:14px;align-items:start}
+.step{width:36px;height:36px;border-radius:50%;border:1px solid var(--ink);display:grid;place-items:center;font-family:var(--display);font-size:1.15rem;font-weight:600}
+.body{border:1px solid var(--line);border-radius:18px;overflow:hidden;min-width:0}
+.bar{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:8px 12px;padding:12px 16px;background:var(--panel);border-bottom:1px solid var(--line)}
+.bar h3{margin:0;font-size:15px;font-weight:600}
+.when{font-size:12px;letter-spacing:.06em;text-transform:uppercase;color:var(--muted)}
+.copy{font:inherit;font-size:13px;font-weight:600;border:1px solid var(--ink);border-radius:999px;background:var(--ink);color:var(--bg);padding:6px 14px;cursor:pointer}
+.copy.done{background:transparent;color:var(--ink)}
+pre{margin:0;padding:16px;white-space:pre-wrap;word-wrap:break-word;font-family:var(--body);font-size:14px;line-height:1.6;user-select:text}
+.tok{background:var(--token-bg);border-radius:4px;padding:0 4px;font-weight:600}
+.foot{color:var(--muted);font-size:13px;border-top:1px solid var(--line);padding-top:16px}
+@media (max-width:520px){.card{grid-template-columns:1fr}.step{display:none}}
+@media (prefers-reduced-motion:reduce){*{transition:none!important}}
+</style>
+
+<div class="wrap">
+  <header>
+    <h1>Turo Message Templates</h1>
+    <p class="lede">Welcome, check-in and checkout messages for each vehicle, ready for Turo's Scheduled Messages. Shaded words in brackets are placeholders: swap each one for the matching Turo token (guest name, trip start, trip end) when you paste.</p>
+  </header>
+
+  <section class="notes" aria-label="Setup notes">
+    <div class="note"><b>Where these go</b><p>Turo's Scheduled messages feature (Turo Help: "Managing scheduled messages"). Create one template per card below, set the timing shown, and assign it to that vehicle only.</p></div>
+    <div class="note"><b>East side only</b><p>From Nov 3, ParkDIA shuttles pick up and drop off on the east side only: Level 5, Door 513, Island 3. Every template below already says this.</p></div>
+    <div class="note"><b>Parking row</b><p>Rows change between trips, so the check-in message says you'll send it. Still send the row by hand about 2 hours before pickup.</p></div>
+  </section>
+
+  <nav class="tabs" role="tablist" aria-label="Vehicle" id="tabs"></nav>
+  <section id="panel" aria-live="polite"></section>
+
+  <p class="foot">Not included: the 2020 Transit (Wilson) and the 2023 Transit (Nix), which are being sold. Sources: each vehicle's Rental Guide &amp; FAQ and Kenna's August pickup emails.</p>
+</div>
+
+<script>
+const EAST = "From the terminal, go to Level 5 and exit Door 513 on the EAST side (the west-side shuttle stop is closed). Head to Island 3 and look for the ParkDIA sign. The free white ParkDIA shuttle runs 24/7 and takes about 10 minutes. Tell the driver you're a Turo guest picking up a rental.";
+const V = {
+  audi:{tab:"Audi Q5", name:"2022 Audi Q5", short:"Audi", color:"gray", seats:"5 seats", fuel:"Premium", fuelNote:"Premium",
+    access:"lock", code:"1067", tall:false, delivery:true},
+  sub:{tab:"Suburban", name:"2021 Chevrolet Suburban", short:"Suburban", color:"white", seats:"7 seats", fuel:"Regular unleaded", fuelNote:"Regular unleaded",
+    access:"lock", code:"1089", tall:false, delivery:true},
+  joker:{tab:"Transit 2024 · Joker", name:"2024 Ford Transit-350 Low Roof", short:"van", color:"white", seats:"15 seats", fuel:"Regular unleaded", fuelNote:"Regular unleaded",
+    access:"remote", tall:false, cargo:"With all 15 seats full there's very little room for luggage, so pack light or plan to leave a row open."},
+  heaps:{tab:"Transit 2025 · Heaps", name:"2025 Ford Transit-350 Med Roof", short:"van", color:"white", seats:"15 seats", fuel:"Regular unleaded", fuelNote:"Regular unleaded",
+    access:"remote", tall:true, cargo:"With all 15 seats full there's very little room for luggage, so pack light or plan to leave a row open."},
+  sprinter:{tab:"Sprinter", name:"2026 Mercedes-Benz Sprinter", short:"Sprinter", color:"black", seats:"15 seats", fuel:"Diesel", fuelNote:"DIESEL only",
+    access:"remote", tall:true, diesel:true, cargo:"There's plenty of cargo room behind all 15 seats."}
+};
+const G = "[Guest first name]", START = "[Trip start date & time]", END = "[Trip end date & time]";
+
+function welcome(v){
+  const extras = [];
+  if (v.cargo) extras.push("• Space: " + v.cargo);
+  if (v.tall) extras.push("• Height: this van is tall. No parking garages or drive-thrus, as it can scrape.");
+  if (v.diesel) extras.push("• Fuel: this Sprinter takes DIESEL only. Gasoline will seriously damage the engine.");
+  const req = v.delivery
+    ? "• Need car seats ($40 each) or terminal garage delivery (from $125)? Message us at least 48 hours before pickup."
+    : "• Need car seats ($40 each)? Message us at least 48 hours before pickup. Vans can't fit in the terminal garage, so pickup is always at ParkDIA.";
+  return [
+    `Hi ${G}! Thank you for booking our ${v.name} with Beverley Fleet. We're excited to host you.`,
+    "",
+    "A few things to know before your trip:",
+    "• Pickup is at ParkDIA (25200 E 68th Ave, Aurora, CO 80019), the lot right next to Denver International Airport. We'll message full check-in steps the day before your trip.",
+    `• This ${v.short === "van" ? "van" : v.short} has ${v.seats} and takes ${v.fuel.toLowerCase()} fuel.`,
+    ...extras,
+    req,
+    "",
+    "Questions anytime? Just reply here.",
+    "Cristin, Beverley Fleet"
+  ].join("\n");
+}
+function checkin(v){
+  const unlock = v.access === "lock"
+    ? `4. Your key fob is in the lockbox on the vehicle. Lockbox code: ${v.code}.`
+    : "4. We'll unlock the van remotely around your pickup time. The key fob is in the glove box. If it's still locked when you get there, message or call us at 720-437-9655 and we'll unlock it right away.";
+  const lines = [
+    `Hi ${G}, here's everything you need for pickup on ${START}:`,
+    "",
+    "1. " + EAST,
+    `2. ParkDIA is a big lot. We'll message you the exact row about 2 hours before pickup, and the shuttle will drop you right at the ${v.short === "van" ? "van" : v.short}.`,
+    `3. Your ${v.name} is ${v.color}.`,
+    unlock,
+    "5. Before you drive off, take check-in photos in the Turo app: all four sides, the roof line, the interior, the fuel gauge and the odometer. This protects you if there's any question about damage later.",
+    "6. The RFID sticker on the windshield opens the exit gate automatically."
+  ];
+  if (v.tall) lines.push("7. Reminder: no parking garages or drive-thrus. This van is tall.");
+  lines.push("", "Have a great trip!", "Cristin, Beverley Fleet");
+  return lines.join("\n");
+}
+function checkout(v){
+  const fuel = v.diesel
+    ? "1. Fill the tank with DIESEL before you return. Double-check the pump says Diesel. Gasoline in this van causes major engine damage."
+    : `1. Fill the tank with ${v.fuelNote.toLowerCase()} before you return. Nearby: 7101 Tower Rd, Denver 80249 (usually less busy) or 7680 Peña Blvd, Denver 80249.`;
+  const key = v.access === "lock"
+    ? "4. Lock the vehicle, put the key fob back in its black bag, return it to the lockbox, and make sure the lockbox is closed and locked."
+    : "4. Leave the key fob in the glove box, then lock the van.";
+  return [
+    `Hi ${G}, we hope the trip has been great! Here's how to return the ${v.short === "van" ? "van" : v.short} on ${END}:`,
+    "",
+    fuel,
+    "2. Return to ParkDIA (25200 E 68th Ave, Aurora). The RFID sticker opens the gate. Park in the row where the shuttles line up; an attendant can point you to it.",
+    "3. Take check-out photos in the Turo app: all four sides, the interior, the fuel gauge and the odometer.",
+    key,
+    "5. Message us the row you parked in.",
+    "6. Catch the free ParkDIA shuttle back to the airport. It drops off on the EAST side of the terminal, Level 5.",
+    "",
+    "Thank you for renting with us. Safe travels!",
+    "Cristin, Beverley Fleet"
+  ].join("\n");
+}
+const STEPS = [
+  {title:"Welcome", when:"Send: right after booking", fn:welcome},
+  {title:"Check-in instructions", when:"Send: 24 hours before trip start", fn:checkin},
+  {title:"Checkout instructions", when:"Send: 18 hours before trip end", fn:checkout}
+];
+
+const tabs = document.getElementById("tabs"), panel = document.getElementById("panel");
+const esc = s => s.replace(/[&<>]/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;"}[c]));
+const mark = s => esc(s).replace(/\[[^\]]+\]/g, m => `<span class="tok">${m}</span>`);
+
+function render(key){
+  const v = V[key];
+  [...tabs.children].forEach(b => b.setAttribute("aria-selected", b.dataset.k === key));
+  const specs = [v.seats, v.fuel, v.access === "lock" ? "Lockbox " + v.code : "Remote unlock", v.tall ? "Tall: no garages" : null].filter(Boolean);
+  panel.innerHTML = `
+    <div class="vhead"><h2>${v.name}</h2><div class="specs">${specs.map(s=>`<span class="spec">${s}</span>`).join("")}</div></div>
+    <div class="cards" style="margin-top:18px">
+      ${STEPS.map((s,i)=>`
+        <article class="card">
+          <div class="step" aria-hidden="true">${i+1}</div>
+          <div class="body">
+            <div class="bar"><div><h3>${s.title}</h3><div class="when">${s.when}</div></div>
+              <button class="copy" id="copy-${key}-${i}" data-i="${i}">Copy</button></div>
+            <pre id="msg-${key}-${i}">${mark(s.fn(v))}</pre>
+          </div>
+        </article>`).join("")}
+    </div>`;
+  panel.querySelectorAll(".copy").forEach(btn => btn.addEventListener("click", () => {
+    const pre = document.getElementById(`msg-${key}-${btn.dataset.i}`);
+    const done = () => { btn.textContent = "Copied"; btn.classList.add("done"); setTimeout(()=>{btn.textContent="Copy";btn.classList.remove("done")},1600); };
+    navigator.clipboard.writeText(pre.textContent).then(done).catch(() => {
+      const r = document.createRange(); r.selectNodeContents(pre);
+      const sel = getSelection(); sel.removeAllRanges(); sel.addRange(r);
+      btn.textContent = "Selected: press Copy";
+    });
+  }));
+  try { localStorage.setItem("bf-tab", key); } catch(e) {}
+}
+Object.entries(V).forEach(([k,v]) => {
+  const b = document.createElement("button");
+  b.className = "tab"; b.role = "tab"; b.dataset.k = k; b.id = "tab-" + k; b.textContent = v.tab;
+  b.addEventListener("click", () => render(k));
+  tabs.appendChild(b);
+});
+let start = "audi";
+try { const s = localStorage.getItem("bf-tab"); if (s && V[s]) start = s; } catch(e) {}
+render(start);
+</script>

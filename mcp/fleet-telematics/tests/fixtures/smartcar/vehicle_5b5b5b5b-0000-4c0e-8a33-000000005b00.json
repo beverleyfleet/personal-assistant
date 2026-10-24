@@ -1,0 +1,16 @@
+{
+ "data": {
+  "id": "5b5b5b5b-0000-4c0e-8a33-000000005b00",
+  "type": "vehicle",
+  "attributes": {
+   "make": "Chevrolet",
+   "model": "Suburban",
+   "year": 2021,
+   "powertrainType": "ICE",
+   "mode": "live"
+  },
+  "links": {
+   "self": "/vehicles/5b5b5b5b-0000-4c0e-8a33-000000005b00"
+  }
+ }
+}

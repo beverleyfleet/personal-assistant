@@ -1,0 +1,16 @@
+{
+ "data": {
+  "id": "3f1c2b7e-25aa-4c1e-9a10-000000000025",
+  "type": "vehicle",
+  "attributes": {
+   "make": "Ford",
+   "model": "Transit",
+   "year": 2025,
+   "powertrainType": "ICE",
+   "mode": "live"
+  },
+  "links": {
+   "self": "/vehicles/3f1c2b7e-25aa-4c1e-9a10-000000000025"
+  }
+ }
+}

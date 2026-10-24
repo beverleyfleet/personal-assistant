@@ -1,0 +1,823 @@
+{
+ "source": "https://compatibility.api.smartcar.com/v3/compatible-vehicles?filter[region]=US&filter[make]=<MAKE>",
+ "retrieved": "2026-10-24",
+ "note": "Trimmed to the Beverley Fleet models. Refresh with: fleet-auth compat --refresh",
+ "data": [
+  {
+   "id": "FORD-Transit-2020-2026-ICE-US",
+   "make": "Ford",
+   "model": "Transit",
+   "region": "US",
+   "powertrainType": "ICE",
+   "years": {
+    "start": 2020,
+    "end": 2026
+   },
+   "capabilities": [
+    {
+     "type": "command",
+     "capability": "closure-lock",
+     "permission": ""
+    },
+    {
+     "type": "command",
+     "capability": "closure-unlock",
+     "permission": ""
+    },
+    {
+     "type": "signal",
+     "capability": "closure-doors",
+     "permission": "read_security"
+    },
+    {
+     "type": "signal",
+     "capability": "closure-enginecover",
+     "permission": "read_security"
+    },
+    {
+     "type": "signal",
+     "capability": "closure-islocked",
+     "permission": "read_security"
+    },
+    {
+     "type": "signal",
+     "capability": "closure-reartrunk",
+     "permission": "read_security"
+    },
+    {
+     "type": "signal",
+     "capability": "internalcombustionengine-amountremaining",
+     "permission": "read_fuel"
+    },
+    {
+     "type": "signal",
+     "capability": "internalcombustionengine-fuellevel",
+     "permission": "read_fuel"
+    },
+    {
+     "type": "signal",
+     "capability": "internalcombustionengine-oillife",
+     "permission": "read_engine_oil"
+    },
+    {
+     "type": "signal",
+     "capability": "internalcombustionengine-range",
+     "permission": "read_fuel"
+    },
+    {
+     "type": "signal",
+     "capability": "location-preciselocation",
+     "permission": "read_location"
+    },
+    {
+     "type": "signal",
+     "capability": "odometer-traveleddistance",
+     "permission": "read_odometer"
+    },
+    {
+     "type": "signal",
+     "capability": "service-records",
+     "permission": "read_service_history"
+    },
+    {
+     "type": "signal",
+     "capability": "vehicleidentification-vin",
+     "permission": "read_vin"
+    },
+    {
+     "type": "signal",
+     "capability": "wheel-tires",
+     "permission": "read_tires"
+    }
+   ]
+  },
+  {
+   "id": "FORD-Transit-2022-2023-BEV-US",
+   "make": "Ford",
+   "model": "Transit",
+   "region": "US",
+   "powertrainType": "BEV",
+   "years": {
+    "start": 2022,
+    "end": 2023
+   },
+   "capabilities": [
+    {
+     "type": "signal",
+     "capability": "charge-chargelimits",
+     "permission": "read_charge"
+    },
+    {
+     "type": "signal",
+     "capability": "charge-chargetimers",
+     "permission": "read_charge"
+    },
+    {
+     "type": "signal",
+     "capability": "charge-detailedchargingstatus",
+     "permission": "read_charge"
+    },
+    {
+     "type": "signal",
+     "capability": "charge-ischarging",
+     "permission": "read_charge"
+    },
+    {
+     "type": "signal",
+     "capability": "charge-ischargingcableconnected",
+     "permission": "read_charge"
+    },
+    {
+     "type": "signal",
+     "capability": "closure-doors",
+     "permission": "read_security"
+    },
+    {
+     "type": "signal",
+     "capability": "closure-enginecover",
+     "permission": "read_security"
+    },
+    {
+     "type": "signal",
+     "capability": "closure-islocked",
+     "permission": "read_security"
+    },
+    {
+     "type": "signal",
+     "capability": "closure-reartrunk",
+     "permission": "read_security"
+    },
+    {
+     "type": "signal",
+     "capability": "location-preciselocation",
+     "permission": "read_location"
+    },
+    {
+     "type": "signal",
+     "capability": "odometer-traveleddistance",
+     "permission": "read_odometer"
+    },
+    {
+     "type": "signal",
+     "capability": "tractionbattery-nominalcapacity",
+     "permission": "read_battery"
+    },
+    {
+     "type": "signal",
+     "capability": "tractionbattery-range",
+     "permission": "read_battery"
+    },
+    {
+     "type": "signal",
+     "capability": "tractionbattery-stateofcharge",
+     "permission": "read_battery"
+    },
+    {
+     "type": "signal",
+     "capability": "vehicleidentification-vin",
+     "permission": "read_vin"
+    },
+    {
+     "type": "signal",
+     "capability": "wheel-tires",
+     "permission": "read_tires"
+    }
+   ]
+  },
+  {
+   "id": "AUDI-Q5-2018-2026-ICE-US",
+   "make": "Audi",
+   "model": "Q5",
+   "region": "US",
+   "powertrainType": "ICE",
+   "years": {
+    "start": 2018,
+    "end": 2026
+   },
+   "capabilities": [
+    {
+     "type": "command",
+     "capability": "closure-lock",
+     "permission": ""
+    },
+    {
+     "type": "command",
+     "capability": "closure-unlock",
+     "permission": ""
+    },
+    {
+     "type": "signal",
+     "capability": "closure-doors",
+     "permission": "read_security"
+    },
+    {
+     "type": "signal",
+     "capability": "closure-enginecover",
+     "permission": "read_security"
+    },
+    {
+     "type": "signal",
+     "capability": "closure-fronttrunk",
+     "permission": "read_security"
+    },
+    {
+     "type": "signal",
+     "capability": "closure-islocked",
+     "permission": "read_security"
+    },
+    {
+     "type": "signal",
+     "capability": "closure-reartrunk",
+     "permission": "read_security"
+    },
+    {
+     "type": "signal",
+     "capability": "closure-sunroof",
+     "permission": "read_security"
+    },
+    {
+     "type": "signal",
+     "capability": "closure-windows",
+     "permission": "read_security"
+    },
+    {
+     "type": "signal",
+     "capability": "hvac-isfrontdefrosteractive",
+     "permission": "read_climate"
+    },
+    {
+     "type": "signal",
+     "capability": "hvac-isreardefrosteractive",
+     "permission": "read_climate"
+    },
+    {
+     "type": "signal",
+     "capability": "internalcombustionengine-amountremaining",
+     "permission": "read_fuel"
+    },
+    {
+     "type": "signal",
+     "capability": "internalcombustionengine-fuellevel",
+     "permission": "read_fuel"
+    },
+    {
+     "type": "signal",
+     "capability": "internalcombustionengine-range",
+     "permission": "read_fuel"
+    },
+    {
+     "type": "signal",
+     "capability": "location-preciselocation",
+     "permission": "read_location"
+    },
+    {
+     "type": "signal",
+     "capability": "odometer-traveleddistance",
+     "permission": "read_odometer"
+    },
+    {
+     "type": "signal",
+     "capability": "vehicleidentification-vin",
+     "permission": "read_vin"
+    }
+   ]
+  },
+  {
+   "id": "AUDI-Q5-2020-2025-PHEV-US",
+   "make": "Audi",
+   "model": "Q5",
+   "region": "US",
+   "powertrainType": "PHEV",
+   "years": {
+    "start": 2020,
+    "end": 2025
+   },
+   "capabilities": [
+    {
+     "type": "command",
+     "capability": "charge-start",
+     "permission": ""
+    },
+    {
+     "type": "command",
+     "capability": "charge-stop",
+     "permission": ""
+    },
+    {
+     "type": "command",
+     "capability": "closure-unlock",
+     "permission": ""
+    },
+    {
+     "type": "signal",
+     "capability": "charge-chargeportstatuscolor",
+     "permission": "read_charge"
+    },
+    {
+     "type": "signal",
+     "capability": "charge-chargetimers",
+     "permission": "read_charge"
+    },
+    {
+     "type": "signal",
+     "capability": "charge-detailedchargingstatus",
+     "permission": "read_charge"
+    },
+    {
+     "type": "signal",
+     "capability": "charge-ischarging",
+     "permission": "read_charge"
+    },
+    {
+     "type": "signal",
+     "capability": "charge-ischargingcableconnected",
+     "permission": "read_charge"
+    },
+    {
+     "type": "signal",
+     "capability": "charge-ischargingcablelatched",
+     "permission": "read_charge"
+    },
+    {
+     "type": "signal",
+     "capability": "charge-timetocomplete",
+     "permission": "read_charge"
+    },
+    {
+     "type": "signal",
+     "capability": "closure-doors",
+     "permission": "read_security"
+    },
+    {
+     "type": "signal",
+     "capability": "closure-enginecover",
+     "permission": "read_security"
+    },
+    {
+     "type": "signal",
+     "capability": "closure-islocked",
+     "permission": "read_security"
+    },
+    {
+     "type": "signal",
+     "capability": "closure-reartrunk",
+     "permission": "read_security"
+    },
+    {
+     "type": "signal",
+     "capability": "closure-sunroof",
+     "permission": "read_security"
+    },
+    {
+     "type": "signal",
+     "capability": "closure-windows",
+     "permission": "read_security"
+    },
+    {
+     "type": "signal",
+     "capability": "hvac-isfrontdefrosteractive",
+     "permission": "read_climate"
+    },
+    {
+     "type": "signal",
+     "capability": "hvac-isreardefrosteractive",
+     "permission": "read_climate"
+    },
+    {
+     "type": "signal",
+     "capability": "internalcombustionengine-amountremaining",
+     "permission": "read_fuel"
+    },
+    {
+     "type": "signal",
+     "capability": "internalcombustionengine-fuellevel",
+     "permission": "read_fuel"
+    },
+    {
+     "type": "signal",
+     "capability": "internalcombustionengine-range",
+     "permission": "read_fuel"
+    },
+    {
+     "type": "signal",
+     "capability": "location-preciselocation",
+     "permission": "read_location"
+    },
+    {
+     "type": "signal",
+     "capability": "odometer-traveleddistance",
+     "permission": "read_odometer"
+    },
+    {
+     "type": "signal",
+     "capability": "tractionbattery-nominalcapacity",
+     "permission": "read_battery"
+    },
+    {
+     "type": "signal",
+     "capability": "tractionbattery-range",
+     "permission": "read_battery"
+    },
+    {
+     "type": "signal",
+     "capability": "tractionbattery-stateofcharge",
+     "permission": "read_battery"
+    },
+    {
+     "type": "signal",
+     "capability": "vehicleidentification-vin",
+     "permission": "read_vin"
+    }
+   ]
+  },
+  {
+   "id": "MERCEDES_BENZ-Sprinter-2017-2026-ICE-US",
+   "make": "Mercedes-Benz",
+   "model": "Sprinter",
+   "region": "US",
+   "powertrainType": "ICE",
+   "years": {
+    "start": 2017,
+    "end": 2026
+   },
+   "capabilities": [
+    {
+     "type": "command",
+     "capability": "closure-lock",
+     "permission": ""
+    },
+    {
+     "type": "command",
+     "capability": "closure-unlock",
+     "permission": ""
+    },
+    {
+     "type": "signal",
+     "capability": "closure-doors",
+     "permission": "read_security"
+    },
+    {
+     "type": "signal",
+     "capability": "closure-enginecover",
+     "permission": "read_security"
+    },
+    {
+     "type": "signal",
+     "capability": "closure-fronttrunk",
+     "permission": "read_security"
+    },
+    {
+     "type": "signal",
+     "capability": "closure-islocked",
+     "permission": "read_security"
+    },
+    {
+     "type": "signal",
+     "capability": "closure-reartrunk",
+     "permission": "read_security"
+    },
+    {
+     "type": "signal",
+     "capability": "closure-sunroof",
+     "permission": "read_security"
+    },
+    {
+     "type": "signal",
+     "capability": "closure-windows",
+     "permission": "read_security"
+    },
+    {
+     "type": "signal",
+     "capability": "connectivitystatus-isonline",
+     "permission": "read_vehicle_info"
+    },
+    {
+     "type": "signal",
+     "capability": "diagnostics-brakefluid",
+     "permission": "read_diagnostics"
+    },
+    {
+     "type": "signal",
+     "capability": "diagnostics-washerfluid",
+     "permission": "read_diagnostics"
+    },
+    {
+     "type": "signal",
+     "capability": "internalcombustionengine-amountremaining",
+     "permission": "read_fuel"
+    },
+    {
+     "type": "signal",
+     "capability": "internalcombustionengine-fuellevel",
+     "permission": "read_fuel"
+    },
+    {
+     "type": "signal",
+     "capability": "internalcombustionengine-range",
+     "permission": "read_fuel"
+    },
+    {
+     "type": "signal",
+     "capability": "location-preciselocation",
+     "permission": "read_location"
+    },
+    {
+     "type": "signal",
+     "capability": "odometer-traveleddistance",
+     "permission": "read_odometer"
+    },
+    {
+     "type": "signal",
+     "capability": "surveillance-isenabled",
+     "permission": "read_vehicle_info"
+    },
+    {
+     "type": "signal",
+     "capability": "vehicleidentification-vin",
+     "permission": "read_vin"
+    },
+    {
+     "type": "signal",
+     "capability": "wheel-tires",
+     "permission": "read_tires"
+    }
+   ]
+  },
+  {
+   "id": "MERCEDES_BENZ-Sprinter-2023-2023-BEV-US",
+   "make": "Mercedes-Benz",
+   "model": "Sprinter",
+   "region": "US",
+   "powertrainType": "BEV",
+   "years": {
+    "start": 2023,
+    "end": 2023
+   },
+   "capabilities": [
+    {
+     "type": "signal",
+     "capability": "charge-detailedchargingstatus",
+     "permission": "read_charge"
+    },
+    {
+     "type": "signal",
+     "capability": "charge-ischarging",
+     "permission": "read_charge"
+    },
+    {
+     "type": "signal",
+     "capability": "charge-ischargingcableconnected",
+     "permission": "read_charge"
+    },
+    {
+     "type": "signal",
+     "capability": "charge-ischargingportflapopen",
+     "permission": "read_charge"
+    },
+    {
+     "type": "signal",
+     "capability": "charge-wattage",
+     "permission": "read_charge"
+    },
+    {
+     "type": "signal",
+     "capability": "closure-doors",
+     "permission": "read_security"
+    },
+    {
+     "type": "signal",
+     "capability": "closure-enginecover",
+     "permission": "read_security"
+    },
+    {
+     "type": "signal",
+     "capability": "closure-reartrunk",
+     "permission": "read_security"
+    },
+    {
+     "type": "signal",
+     "capability": "closure-windows",
+     "permission": "read_security"
+    },
+    {
+     "type": "signal",
+     "capability": "connectivitystatus-isonline",
+     "permission": "read_vehicle_info"
+    },
+    {
+     "type": "signal",
+     "capability": "diagnostics-brakefluid",
+     "permission": "read_diagnostics"
+    },
+    {
+     "type": "signal",
+     "capability": "diagnostics-washerfluid",
+     "permission": "read_diagnostics"
+    },
+    {
+     "type": "signal",
+     "capability": "odometer-traveleddistance",
+     "permission": "read_odometer"
+    },
+    {
+     "type": "signal",
+     "capability": "tractionbattery-range",
+     "permission": "read_battery"
+    },
+    {
+     "type": "signal",
+     "capability": "tractionbattery-stateofcharge",
+     "permission": "read_battery"
+    },
+    {
+     "type": "signal",
+     "capability": "vehicleidentification-vin",
+     "permission": "read_vin"
+    },
+    {
+     "type": "signal",
+     "capability": "wheel-tires",
+     "permission": "read_tires"
+    }
+   ]
+  },
+  {
+   "id": "CHEVROLET-Suburban-2015-2026-ICE-US",
+   "make": "Chevrolet",
+   "model": "Suburban",
+   "region": "US",
+   "powertrainType": "ICE",
+   "years": {
+    "start": 2015,
+    "end": 2026
+   },
+   "capabilities": [
+    {
+     "type": "command",
+     "capability": "closure-lock",
+     "permission": ""
+    },
+    {
+     "type": "command",
+     "capability": "closure-unlock",
+     "permission": ""
+    },
+    {
+     "type": "signal",
+     "capability": "diagnostics-abs",
+     "permission": "read_diagnostics"
+    },
+    {
+     "type": "signal",
+     "capability": "diagnostics-activesafety",
+     "permission": "read_diagnostics"
+    },
+    {
+     "type": "signal",
+     "capability": "diagnostics-airbag",
+     "permission": "read_diagnostics"
+    },
+    {
+     "type": "signal",
+     "capability": "diagnostics-brakefluid",
+     "permission": "read_diagnostics"
+    },
+    {
+     "type": "signal",
+     "capability": "diagnostics-driverassistance",
+     "permission": "read_diagnostics"
+    },
+    {
+     "type": "signal",
+     "capability": "diagnostics-dtccount",
+     "permission": "read_diagnostics"
+    },
+    {
+     "type": "signal",
+     "capability": "diagnostics-dtclist",
+     "permission": "read_diagnostics"
+    },
+    {
+     "type": "signal",
+     "capability": "diagnostics-emissions",
+     "permission": "read_diagnostics"
+    },
+    {
+     "type": "signal",
+     "capability": "diagnostics-evbatteryconditioning",
+     "permission": "read_diagnostics"
+    },
+    {
+     "type": "signal",
+     "capability": "diagnostics-evcharging",
+     "permission": "read_diagnostics"
+    },
+    {
+     "type": "signal",
+     "capability": "diagnostics-evdriveunit",
+     "permission": "read_diagnostics"
+    },
+    {
+     "type": "signal",
+     "capability": "diagnostics-evhvbattery",
+     "permission": "read_diagnostics"
+    },
+    {
+     "type": "signal",
+     "capability": "diagnostics-lighting",
+     "permission": "read_diagnostics"
+    },
+    {
+     "type": "signal",
+     "capability": "diagnostics-mil",
+     "permission": "read_diagnostics"
+    },
+    {
+     "type": "signal",
+     "capability": "diagnostics-oillife",
+     "permission": "read_diagnostics"
+    },
+    {
+     "type": "signal",
+     "capability": "diagnostics-oilpressure",
+     "permission": "read_diagnostics"
+    },
+    {
+     "type": "signal",
+     "capability": "diagnostics-oiltemperature",
+     "permission": "read_diagnostics"
+    },
+    {
+     "type": "signal",
+     "capability": "diagnostics-telematics",
+     "permission": "read_diagnostics"
+    },
+    {
+     "type": "signal",
+     "capability": "diagnostics-tirepressure",
+     "permission": "read_diagnostics"
+    },
+    {
+     "type": "signal",
+     "capability": "diagnostics-tirepressuremonitoring",
+     "permission": "read_diagnostics"
+    },
+    {
+     "type": "signal",
+     "capability": "diagnostics-transmission",
+     "permission": "read_diagnostics"
+    },
+    {
+     "type": "signal",
+     "capability": "diagnostics-washerfluid",
+     "permission": "read_diagnostics"
+    },
+    {
+     "type": "signal",
+     "capability": "diagnostics-waterinfuel",
+     "permission": "read_diagnostics"
+    },
+    {
+     "type": "signal",
+     "capability": "internalcombustionengine-amountremaining",
+     "permission": "read_fuel"
+    },
+    {
+     "type": "signal",
+     "capability": "internalcombustionengine-fuellevel",
+     "permission": "read_fuel"
+    },
+    {
+     "type": "signal",
+     "capability": "internalcombustionengine-oillife",
+     "permission": "read_engine_oil"
+    },
+    {
+     "type": "signal",
+     "capability": "internalcombustionengine-range",
+     "permission": "read_fuel"
+    },
+    {
+     "type": "signal",
+     "capability": "location-preciselocation",
+     "permission": "read_location"
+    },
+    {
+     "type": "signal",
+     "capability": "odometer-traveleddistance",
+     "permission": "read_odometer"
+    },
+    {
+     "type": "signal",
+     "capability": "vehicleidentification-vin",
+     "permission": "read_vin"
+    },
+    {
+     "type": "signal",
+     "capability": "wheel-tires",
+     "permission": "read_tires"
+    }
+   ]
+  }
+ ]
+}

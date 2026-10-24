@@ -1,0 +1,16 @@
+{
+ "data": {
+  "id": "a0d1a0d1-0000-4a11-8e22-0000000a0d10",
+  "type": "vehicle",
+  "attributes": {
+   "make": "Audi",
+   "model": "Q5",
+   "year": 2022,
+   "powertrainType": "ICE",
+   "mode": "live"
+  },
+  "links": {
+   "self": "/vehicles/a0d1a0d1-0000-4a11-8e22-0000000a0d10"
+  }
+ }
+}

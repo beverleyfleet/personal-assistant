@@ -1,0 +1,94 @@
+# Beverley Fleet vehicle map for fleet-telematics.
+# Override the location with env FLEET_CONFIG. `fleet-auth connect` fills in
+# smartcar_vehicle_id (and a missing VIN) after the owner connects each brand account.
+# Nothing in this file is secret: Smartcar user ids and the client secret live in 1Password.
+#
+# key            short id used by the tools (also accepts name, nickname, plate, VIN or last 6 of VIN)
+# provider       smartcar | ford_pro | mercedes_pro   (the last two are documented stubs)
+# smartcar_account  which owner login (brand account) connected this vehicle; selects the 1Password
+#                field "user_id_<account>" that holds the Smartcar user id (sc-user-id header)
+# powertrain     ICE | PHEV | BEV, used to pick the right row of the Smartcar compatibility matrix
+
+[geofence]
+name = "ParkDIA"
+address = "25200 E 68th Ave, Aurora, CO 80019"
+# Centroid of the OpenStreetMap ParkDIA lot polygon (way 1131040629, operator=ParkDIA),
+# bbox lat 39.81603..39.82002, lon -104.69235..-104.68512, checked 2026-10-24.
+# The coordinates in the original brief (39.8155, -104.7270) reverse-geocode to the E-470
+# highway about 3.3 km west of the lot, so they were not used.
+lat = 39.8180
+lon = -104.6888
+radius_m = 600
+
+[thresholds]
+low_fuel_percent = 25
+
+[[vehicle]]
+key = "audi"
+name = "2022 Audi Q5"
+year = 2022
+make = "Audi"
+model = "Q5"
+powertrain = "ICE"
+vin = "WA1GAAFY6N2085527"
+plate = "EIUY09"
+provider = "smartcar"
+smartcar_account = "audi"
+smartcar_vehicle_id = ""
+
+[[vehicle]]
+key = "sub"
+name = "2021 Chevrolet Suburban"
+year = 2021
+make = "Chevrolet"
+model = "Suburban"
+powertrain = "ICE"
+vin = ""            # not on record yet; fleet-auth fills it from the vehicle after connecting
+plate = "FNYI83"
+provider = "smartcar"
+smartcar_account = "chevrolet"
+smartcar_vehicle_id = ""
+
+[[vehicle]]
+key = "t24"
+name = "2024 Ford Transit-350"
+nickname = "Joker"
+year = 2024
+make = "Ford"
+model = "Transit"
+powertrain = "ICE"
+vin = "1FBAX9Y87RKA27765"
+plate = "Temp 8620436"
+provider = "smartcar"
+smartcar_account = "ford"
+smartcar_vehicle_id = ""
+
+[[vehicle]]
+key = "t25"
+name = "2025 Ford Transit-350"
+nickname = "Heaps"
+year = 2025
+make = "Ford"
+model = "Transit"
+powertrain = "ICE"
+vin = "1FBAX9CGXSKA05649"
+plate = "Temp 8632431"
+provider = "smartcar"
+smartcar_account = "ford"
+smartcar_vehicle_id = ""
+
+[[vehicle]]
+key = "sprinter"
+name = "2026 Mercedes-Benz Sprinter"
+year = 2026
+make = "Mercedes-Benz"
+model = "Sprinter"
+powertrain = "ICE"
+vin = ""            # unknown; fleet-auth fills it from the vehicle after connecting
+plate = ""
+provider = "smartcar"   # switch to "mercedes_pro" only if that stub is ever implemented
+smartcar_account = "mercedes"
+smartcar_vehicle_id = ""
+
+# Other Transits on record elsewhere (2020 VIN 1FBAX9XG1LKB55063, 2023 VIN 1FBAX9CG6PKB15928,
+# plate FNYG83) were not in this server's brief. To add one, copy a Transit block above.
