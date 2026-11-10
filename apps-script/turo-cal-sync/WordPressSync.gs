@@ -162,13 +162,12 @@ function syncTuroCancellations_() {
 }
 
 // The calendar event's description embeds "reservation/<id>" (see
-// buildEventDescription_, Code.js) — search current/upcoming events for
-// that rather than trying to match by guest name a second time.
+// buildEventDescription_, Code.js) — search for that rather than trying to
+// match by guest name a second time. The search window lives in
+// findCalendarEventByReservationId_ (TripChanges.js); it used to be 120
+// days, which missed bookings canceled further out than that.
 function removeCalendarEventByReservationId_(reservationId) {
-  const now = new Date();
-  const events = CalendarApp.getDefaultCalendar().getEvents(now, new Date(now.getTime() + 120 * 24 * 60 * 60 * 1000));
-  const needle = 'reservation/' + reservationId;
-  const match = events.find(function (e) { return (e.getDescription() || '').indexOf(needle) !== -1; });
+  const match = findCalendarEventByReservationId_(reservationId);
   if (match) {
     match.deleteEvent();
     Logger.log('Removed the calendar event for canceled Reservation ID #' + reservationId + '.');

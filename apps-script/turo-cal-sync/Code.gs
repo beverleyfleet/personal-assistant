@@ -377,7 +377,8 @@ function installRealtimeTrigger() {
   installEveryFiveMinutes_('syncTuroBookingsToCalendar');
   installEveryFiveMinutes_('syncGuestStatusNotes');
   installEveryFiveMinutes_('syncTuroCancellations');
-  Logger.log('Triggers installed — checking for new Turo emails, cancellations, and guest messages every 5 minutes.');
+  installEveryFiveMinutes_('syncTuroTripChanges');
+  Logger.log('Triggers installed — checking for new Turo emails, cancellations, trip changes, and guest messages every 5 minutes.');
 }
 
 // Clears any existing trigger for this function first (so re-running this
