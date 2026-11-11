@@ -81,7 +81,7 @@ assert.strictEqual(paul.title, '2021 Chevrolet Suburban — Paul — Pickup 2/23
 assert.strictEqual(events.filter(e => e.desc.includes('62256487')).length, 1, 'no duplicate Paul event');
 const claudine = events.find(e => e.desc.includes('62950737'));
 assert(claudine, 'missing Claudine event created');
-assert.deepStrictEqual(claudine.guests, ['info@beverleyfleet.com', 'vkallday1996@icloud.com']);
+assert.deepStrictEqual(claudine.guests, ['info@beverleyfleet.com', 'vkallday1996@gmail.com']);
 assert(!events.some(e => e.desc.includes('59154055')), 'past Georgette trip not recreated');
 assert.strictEqual(sheetRows.rows[0][4].getTime(), new Date(2027,1,23,7,30).getTime(), 'tracker Date Out');
 assert.strictEqual(sheetRows.rows[0][5].getTime(), new Date(2027,1,26,7,30).getTime(), 'tracker Date Due');
