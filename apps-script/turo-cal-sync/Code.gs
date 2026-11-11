@@ -5,7 +5,7 @@
  * Turo "upcoming trip" notification emails, matches the vehicle
  * against the Beverley_Fleet_Vehicle_Info sheet, and creates a
  * Google Calendar event with the vehicle nickname + plate —
- * shared with info@beverleyfleet.com and vkallday1996@gmail.com.
+ * shared with info@beverleyfleet.com and vkallday1996@icloud.com.
  *
  * SETUP (one time, required after any push from clasp):
  *   1. Open this project at script.google.com.
@@ -38,7 +38,7 @@
 // ====================== CONFIG ======================
 
 const VEHICLE_SHEET_ID = '1ve7L683k5j_TOWL93BnreU7Av2QXyf605POCXV8kec0'; // Beverley_Fleet_Vehicle_Info
-const SHARE_WITH = ['info@beverleyfleet.com', 'vkallday1996@gmail.com'];
+const SHARE_WITH = ['info@beverleyfleet.com', 'vkallday1996@icloud.com'];
 // NOTE: deliberately no "from:" filter. Turo's "upcoming trip" emails used
 // to arrive as noreply@mail.turo.com, but as of Aug 2026 they're showing up
 // in this mailbox re-sent from info@beverleyfleet.com (something upstream
